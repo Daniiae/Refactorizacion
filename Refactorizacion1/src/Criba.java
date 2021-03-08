@@ -1,8 +1,15 @@
 import java.util.Scanner;
 public class Criba {
-
+	/**
+	 * @author Daniel Bayarri
+	 * @since 08/03/21
+	 */
     int dato;
-
+    /**
+     * 
+     * @param dato : es el numero que pedimos por consola para generar nuestro vector
+     * @return nos devuelve el array de numeros primos
+     */
     public static int [] cribaPrimos (int dato) {
         int dim = dato + 1;
         boolean[] esPrimo = new boolean[dim];
@@ -32,19 +39,30 @@ public class Criba {
         }
         return primos;
     }
-
+    /**
+     * 
+     * @param dato mismo dato que el anterior, el pedido por consola
+     * @return nos devuelve el array creado por si el dato es menor de 2
+     */
     public static int[] cribaPrimosMenosDos (int dato) {
 
         return new int[0];
 
     }
-
+    	/**
+    	 * 
+    	 * @return nos devuelve el valor de dato, utilizado durante todo el programa
+    	 */
     public static int pedirNumero () {
         Scanner teclado=new Scanner(System.in);
         System.out.println("Introduce el número para la criba de Erastótenes:");
         int dato=teclado.nextInt();
         return dato;
     }
+    /**
+     * imprime por pantalla el resultado del vector
+     * @param dato
+     */
     public static void cribaErastotenes (int dato){
         int vector[]=new int[dato];
         System.out.println("\nVector inicial hasta :"+dato);
